@@ -1,0 +1,177 @@
+<?php 
+    include('./connection.php');
+    include('./functions/functioncommon.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce</title>
+    <!--fonrawosome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!--navbar-->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="displayAll.php">products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Total price</a>
+        </li>
+      
+      </ul>
+      <form class="d-flex" action="searchproduct.php" method="get">
+        <input class="form-control me-2" name="search_data" type="search" placeholder="Search" aria-label="Search">
+        <!--<button class="btn btn-outline-dark" type="submit">Search</button>-->
+        <input type="submit" value="search" name="searchdata" class="btn btn-outline">
+      </form>
+    </div>
+  </div>
+</nav>
+<!--sidebar-->
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">welcome guest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+
+        </ul>
+
+    </nav>
+    <div class="bg-light">
+        <h3 class="text-center">Hidden store</h3>
+        <p class="text-center">commucincation</p>
+    </div>
+    <!--product items-->
+    <div class="row">
+        <!--products-->
+        <div class="col-md-10">
+            <div class="row">
+                <?php
+                searchproducts();
+                /*
+
+                    $select_query="select * from `products` order by rand() limit 0.9";// limit showsmax number of product to view per page you can by order product title or random
+                    $result = mysqli_query($con,$select_query);
+                    while($row=mysqli_fetch_assoc($result)){
+                        $product_title = $row['product_title'];
+                        $product_description = $row['product_description'];
+                        $product_keywords = $row['product_keywords'];
+                        $category_id = $row['category_id'];
+                        $brand_id = $row['brand_id'];
+                        $product_image1 = $row['product_image1'];
+                        $product_image2 = $row['product_image2'];
+                        $product_image3 = $row['product_image3'];
+                        $product_price = $row['product_price'];
+                        
+                        echo "<div class='col-md-4 mb-3'>
+                        <div class='card'>
+                            <img src='../adminarea/productimages/$product_image2' class='card-img-top' alt='$product_title'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>$product_price </h5>
+                                <h5 class='card-title'>$product_title </h5>
+                                <p class='card-text'>$product_description</p>
+                                <a href='#' class='btn btn-info'>Add to cart</a>
+                                <a href='#' class='btn btn-info'>View more</a>
+                            </div>
+                        </div>";
+                    }
+                    */
+                ?>
+            </div>
+        </div>
+        <!--sidenavbar-->
+        <div class="col-md-2 bg-dark p-0">
+            <ul class="navbar-nav me-auto text-center">
+                <!--brands-->
+                <li class="nav-item bg-info">
+                    <a href="#" class="nav-link text-light"><h4>DELIVERY BRANDS</h4></a>
+                </li>
+
+                <?php
+                    getbrands();
+                    getuniquebrands();
+                    /*
+                
+                    $select_query = "select * from `brands` ";
+                    $select_result = mysqli_query($con,$select_query);
+                    while($row_data = mysqli_fetch_assoc($select_result)){
+                        $brand_title = $row_data['brand_title'];
+                        $brand_id = $row_data['brand_id'];
+
+                        echo "<li class='nav-item bg-dark'>
+                        <a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a>
+                    </li>";
+                    }*/
+                
+                ?>
+            </ul>
+            <!--category-->
+            <ul class="navbar-nav mg-auto text-center">
+                <li class="nav-item bg-info">
+                    <a href="#" class="nav-link text-light"><h4>CATEGORY</h4></a>
+                </li>
+                <?php
+                getcategory();
+                getuniquecategories();
+                /*
+                $select_query = "select * from `categories`";
+                $result = mysqli_query($con,$select_query);
+                while($row = mysqli_fetch_assoc($result)){
+                    $category_title = $row['category_title'];
+                    $category_id = $row['category_id'];
+
+                    echo "<li class='nav-item bg-dark'>
+                    <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
+                </li>";
+                }*/
+                
+                
+                ?>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <?php 
+            include('./footer.php');
+        ?>
+    </div>
+    </div>
+
+
+
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+     crossorigin="anonymous"></script>
+    
+</body>
+</html>
