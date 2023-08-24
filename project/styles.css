@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+body{
+    overflow-x: hidden;
 }
 
 .logo{
@@ -33,5 +37,27 @@
 .cart_img{
     width: 90px;
     height: 90px;
+    object-fit: contain;
+}
+
+/*profileimage*/
+.profileimage{
+    width: 100%;
+    margin: auto;
+    display: block;
+    height: 90%;
+    object-fit: contain;
+    padding: 1px;
+    
+}
+.editimage{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+}
+/* image in view all file*/
+.productimage{
+    width: 100px;
     object-fit: contain;
 }

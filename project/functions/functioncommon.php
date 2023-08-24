@@ -1,6 +1,6 @@
 <?php
 
-    include('./connection.php');
+    //include('./connection.php');
     //getting products
     function getproducts(){
      global $con; 
@@ -375,5 +375,42 @@ function getbrands(){
             }
         }
         echo $total_price;
+    }
+
+
+    //get user order details in the profile
+
+    function getUserOrder(){
+        global $con;
+        $username=$_SESSION['username'];
+        $get_details="select * from `regislation` where username='$username'";
+        $result_details=mysqli_query($con,$get_details);
+        while($row_query=mysqli_fetch_array($result_details)){
+           $user_id=$row_query['user_id'];
+           if(!isset($_GET['edit_account'])){
+            if(!isset($_GET['my_orders'])){
+                if(!isset($_GET['delete_account'])){
+                    $get_order="select * from `user_orders` where user_id=$user_id AND order_status='pending'";
+                    $result_order=mysqli_query($con,$get_order);
+                    $row_count=mysqli_num_rows($result_order);
+                    if($row_count>0){
+                        echo "<h3 class='text-success text-center my-5'>You have<span class='text-danger'> $row_count </span>pending orders</h3>
+                        <h5 class='text-center'><a href='profile.php?my_orders'class='text-danger text-decoration-none ' > view Orders details</a></h5>
+                        ";
+                        
+                    }else{
+                        echo "<h3 class='text-success text-center my-5 p-4'>You have<span class='text-danger'> 0 </span>pending orders</h3>
+                        <h5 class='text-center'><a href='../index.php'class='text-success' >Explore products</a></h5>
+
+                        ";
+
+                    }
+                }
+            }
+
+           }
+
+        }
+
     }
 ?>

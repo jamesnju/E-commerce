@@ -50,10 +50,6 @@
             if($result){
                 echo "<script>alert('successfull')</script>";
             }
-
-
-           
-
         }
 
         
