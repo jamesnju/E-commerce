@@ -1,7 +1,7 @@
 <?php
     include("../connection.php");
     include('../functions/functioncommon.php');
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +30,18 @@
                             <a href="logout.php" class="nav-link text-light">Log Out</a>
                         </li>
                     </ul>
+                    <?php 
+        
+                        if(!isset($_SESSION['username'])){
+                        echo '<li class="nav-item">
+                        <a class="nav-link" href="#">Welcome Guest</a>
+                        </li>';
+                        }else{
+                        echo '<li class="nav-item">
+                        <a class="nav-link" href="#">Welcome '.$_SESSION['username'].'</a>
+                        </li>';
+                        }
+                     ?>
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="" class="nav-link">welcome guest</a>

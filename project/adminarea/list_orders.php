@@ -34,7 +34,7 @@
 
             ?>
 
-                echo"<tbody class='bg-secondary text-light'>
+                <tbody class='bg-secondary text-light'>
                 <tr class="bg-secondary text-light" >
                     <td class="bg-secondary text-light "><?php echo $number; ?></td>
                     <td class="bg-secondary text-light "><?php echo $amount_due; ?></td>

@@ -62,7 +62,7 @@
         <div class='card'>
             <img src='../adminarea/productimages/$product_image2' class='card-img-top' alt='$product_title'>
             <div class='card-body'>
-                <h5 class='card-title'>Price: Kshs$product_price /=</h5>
+                <h5 class='card-title'>Price: Kshs $product_price /=</h5>
                 <h5 class='card-title'>$product_title </h5>
                 <p class='card-text'>$product_description</p>
                 <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>

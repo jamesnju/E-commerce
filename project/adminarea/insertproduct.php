@@ -24,7 +24,7 @@
 
         /*checkingif the fields are empty*/
         if($product_title =='' or $product_description=='' or$product_keywords=='' or $category_id=='' or $brand_id=='' or 
-        $product_image1=='' or $product_image2=='' or $product_image3=='' or $product_price==''){
+        $product_image1=='' or $product_image2=='' /* or $product_image3==''  */or $product_price==''){
 
             echo "<script>alert('fill all the fileds')</script>";
             //exit();
