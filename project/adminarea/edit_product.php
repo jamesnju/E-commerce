@@ -1,4 +1,7 @@
 <?php
+
+include("../connection.php");
+
     if(isset($_GET['edit_product'])){
         $edit_id=$_GET['edit_product'];
         //echo $edit_id;
@@ -130,7 +133,50 @@
 </html>
 <!-- editing udate button -->
 <?php
-    if(isset($_POST['edit_product_button'])){
+if (isset($_POST['edit_product_button'])) {
+    $product_tit = $_POST['product_title'];
+    $product_descripi = $_POST['product_description'];
+    $product_keywor = $_POST['product_keywords'];
+    $product_category = $_POST['product_category']; // Corrected variable name
+    $product_bra = $_POST['product_brand'];
+    $product_pri = $_POST['product_price'];
+    $product_image1 = $_FILES['product_image1']['name'];
+    $product_image2 = $_FILES['product_image2']['name'];
+    $product_image3 = $_FILES['product_image3']['name'];
+
+    $temp_image1 = $_FILES['product_image1']['tmp_name'];
+    $temp_image2 = $_FILES['product_image2']['tmp_name'];
+    $temp_image3 = $_FILES['product_image3']['tmp_name'];
+
+    // Checking if fields are empty
+    if ($product_tit == '' || $product_descripi == '' || $product_keywor == '' || $product_category == '' ||
+        $product_bra == '' || $product_image1 == '' || $product_image2 == '' || $product_image3 == '' || $product_pri == '') {
+
+        echo "<script>alert('Please fill in all fields')</script>";
+
+    } else {
+        move_uploaded_file($temp_image1, "./productimages/$product_image1");
+        move_uploaded_file($temp_image2, "./productimages/$product_image2");
+        move_uploaded_file($temp_image3, "./productimages/$product_image3");
+
+        // Query to update products
+        $update_sql = "UPDATE `products` SET product_title='$product_tit', product_description='$product_descripi',
+            product_keywords='$product_keywor', category_id='$product_category', brand_id='$product_bra',
+            product_image1='$product_image1', product_image2='$product_image2', product_image3='$product_image3',
+            product_price='$product_pri', date=NOW() WHERE product_id=$edit_id";
+
+        $result_update = mysqli_query($con, $update_sql);
+
+        if ($result_update) {
+            echo "<script>alert('Products updated successfully')</script>";
+            echo "<script>window.open('./viewproduct.php', '_self')</script>";
+        }
+    }
+}
+?>
+
+<?php
+   /*  if(isset($_POST['edit_product_button'])){
         $product_tit=$_POST['product_title'];
         $product_descripti=$_POST['product_description'];
         $product_keywor=$_POST['product_keywords'];
@@ -170,7 +216,7 @@
             
         } 
         
-    }
+    } */
    
 
 ?>

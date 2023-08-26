@@ -25,6 +25,11 @@
                 <img src="../img/user.png" alt="Amin" class="admin p-0">
 
                 <nav class="navbar navbar-expand-lg ">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="logout.php" class="nav-link text-light">Log Out</a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="" class="nav-link">welcome guest</a>
@@ -53,10 +58,10 @@
                     <button><a href="index.php?viewcategories" class="nav-link text-light bg-dark my-1">View categories</a></button>
                     <button><a href="index.php?insertbrand" class="nav-link text-light bg-dark my-1">Insert Brands</a></button>
                     <button><a href="index.php?viewbrands" class="nav-link text-light bg-dark my-1">View Brands</a></button>
-                    <button><a href="" class="nav-link text-light bg-dark my-1">All orders</a></button>
-                    <button><a href="" class="nav-link text-light bg-dark my-1">All payments</a></button>
-                    <button><a href="" class="nav-link text-light bg-dark my-1">List users</a></button>
-                    <button><a href="" class="nav-link text-light bg-dark my-1">Logout</a></button>
+                    <button><a href="index.php?list_orders" class="nav-link text-light bg-dark my-1">All orders</a></button>
+                    <button><a href="index.php?list_payments" class="nav-link text-light bg-dark my-1">All payments</a></button>
+                    <button><a href="index.php?list_users" class="nav-link text-light bg-dark my-1">List users</a></button>
+                    <button><a href="logout.php" class="nav-link text-light bg-dark my-1">Logout</a></button>
                 </div>
             </div>
         </div>
@@ -93,6 +98,27 @@
                 if(isset($_GET['delete_category'])){
                     include('delete_category.php');
                 }
+                if(isset($_GET['delete_brands'])){
+                    include('delete_brands.php');
+                }
+                if(isset($_GET['list_orders'])){
+                    include('list_orders.php');
+                }
+                if(isset($_GET['delete_orders'])){
+                    include('delete_orders.php');
+                }
+                if(isset($_GET['list_payments'])){
+                    include('list_payments.php');
+                }
+                if(isset($_GET['delete_payments'])){
+                    include('delete_payments.php');
+                }
+                if(isset($_GET['list_users'])){
+                    include('list_users.php');
+                }
+                if(isset($_GET['delete_users'])){
+                    include('delete_users.php');
+                }
             ?>
         </div>
        
@@ -115,5 +141,9 @@
  <!--bootstrap js-->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
      crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

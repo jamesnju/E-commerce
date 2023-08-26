@@ -35,10 +35,17 @@
             <td class='bg-primary text-light'>$total_products</td>
             <td class='bg-primary text-light'>$invoice_number</td>
             <td class='bg-primary text-light'>$order_date</td>
-            <td class='bg-primary text-light'>$order_status</td>
-            <td class='bg-primary text-light'><a href='confirmpayment.php?order_id=$order_id' class='text-dark'>Confirm</a></td>
-            <td class='bg-primary text-light'></td>
-        </tr>";
+            <td class='bg-primary text-light'>$order_status</td>";
+            ?>
+            <?php
+            if($order_status=='Complete'){
+                echo "<td class='bg-primary text-light'>Paid</td>";
+            }else{
+                echo "<td class='bg-primary text-light'><a href='confirmpayment.php?order_id=$order_id' class='text-dark'>Confirm</a></td>
+                </tr>";
+
+            }
+            
         $number++;
         }
     ?>

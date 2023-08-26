@@ -12,20 +12,20 @@
 <body>
     <h3 class="text-center text-success">View Products</h3>
     <table class="table table-bordered mt-5">
-        <thead class="bg-info">
+        <thead >
             <tr>
-                <th>Produc Id</th>
-                <th>product Title</th>
-                <th>Product Image</th>
-                <th>product price</th>
-                <th>Total Sold</th>
-                <th>status</th>
-                <th>edit</th>
-                <th>Delete</th>
-                <th></th>
+                <th class="bg-info">Produc Id</th>
+                <th class="bg-info">product Title</th>
+                <th class="bg-info">Product Image</th>
+                <th class="bg-info">product price</th>
+                <th class="bg-info">Total Sold</th>
+                <th class="bg-info">status</th>
+                <th class="bg-info">edit</th>
+                <th class="bg-info">Delete</th>
+                <th class="bg-info"></th>
             </tr>
         </thead>
-        <tbody class="bg-secondary text-light">
+        <tbody >
             <?php
                 $select_product="select * from `products`";
                 $result_query=mysqli_query($con,$select_product);
@@ -41,20 +41,20 @@
                     ?>
                 <tr class='text-center'>
                     
-                    <td><?php echo$product_id;?></td>
-                    <td><?php echo$product_title;?></td>
-                    <td><img src='../productimages/<?php echo $product_image1;?>' class='productimage'/></td>
-                    <td><?php echo$product_price;?>/=</td>
-                    <td><?php 
+                    <td class="bg-secondary text-light"><?php echo$number;?></td>
+                    <td class="bg-secondary text-light"><?php echo$product_title;?></td>
+                    <td class="bg-secondary text-light"><img src='./productimages/<?php echo $product_image1;?>' class='productimage'/></td>
+                    <td class="bg-secondary text-light"><?php echo$product_price;?>/=</td>
+                    <td class="bg-secondary text-light"><?php 
                         $get_total="select * from `orders_pending` where product_id=$product_id";
                         $totaL_result=mysqli_query($con,$get_total);
                         $row_count=mysqli_num_rows($totaL_result);
                         echo $row_count;
                     ?></td>
-                    <td><?php echo $status;?></td>
+                    <td class="bg-secondary text-light"><?php echo $status;?></td>
                     
-                    <td> <a href='index.php?edit_product=<?php echo $product_id; ?>' class='text-dark'> <i class='fa-solid fa-pen-to-square'></i> </a></td>
-                    <td><a href='index.php?delete_product=<?php echo $product_id; ?>' class='text-dark'><i class='fa-solid fa-trash'></i></a></td>
+                    <td class="bg-secondary text-light"> <a href='index.php?edit_product=<?php echo $product_id; ?>' class='text-dark'> <i class='fa-solid fa-pen-to-square'></i> </a></td>
+                    <td class="bg-secondary text-light"><a href='index.php?delete_product=<?php echo $product_id; ?>' class='text-dark'><i class='fa-solid fa-trash'></i></a></td>
                 </tr>
                 <?php
 
