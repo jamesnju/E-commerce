@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ecommerce</title>
+    <title>E-commerce</title>
     <!--fonrawosome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -94,8 +94,8 @@
 
     </nav>
     <div class="bg-light">
-        <h3 class="text-center">Hidden store</h3>
-        <p class="text-center">commucincation</p>
+      <h3 class="text-center text-success">SecondHand E-commerce</h3>
+      <p class="text-center">Sell Your Products Online</p>
     </div>
     <!--product items-->
     <div class="row">

@@ -20,20 +20,23 @@
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid p-0">
+    <div class="container-fluid1 p-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+      <ul class="nav77 navbar-nav me-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link " aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="displayAll.php">products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="insertproduct.php">Sale</a>
         </li>
         <?php
           if(isset($_SESSION['username'])){
@@ -45,15 +48,13 @@
             <a class='nav-link' href='./users/registration.php'>Create Account</a>
           </li>";
           }
-
         ?>
-        
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i>
           <sup>
             <?php
               getcartnumbers(); 
-           ?></sup></a>
+          ?></sup></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Total price
@@ -67,7 +68,7 @@
       <form class="d-flex" action="searchproduct.php" method="get">
         <input class="form-control me-2" name="search_data" type="search" placeholder="Search" aria-label="Search">
         <!--<button class="btn btn-outline-dark" type="submit">Search</button>-->
-        <input type="submit" value="search" name="searchdata" class="btn btn-outline">
+        <input type="submit" value="search" name="searchdata" class="btn btn-outline text-light">
       </form>
     </div>
   </div>
@@ -76,7 +77,7 @@
 <?php
 cart();//calling cart function
 ?>
-    <nav class="navbar navbar-expand-lg bg-body-secondary">
+    <nav class="welcom navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto">
         <?php 
         //displays username if logged in
@@ -108,15 +109,15 @@ cart();//calling cart function
         </ul>
 
     </nav>
-    <div class="bg-light">
-        <h3 class="text-center">Hidden store</h3>
-        <p class="text-center">commucincation</p>
+    <div class="second">
+        <h3 class="text-center ">SecondHand E-commerce</h3>
+        <p class="text-center">Sell Your Products Online</p>
     </div>
     <!--product items-->
-    <div class="row">
+    <div class="row outsiderow">
         <!--products-->
         <div class="col-md-10">
-            <div class="row">
+            <div class="row insiderow">
                 <?php
                 
                 getproducts();
@@ -161,7 +162,7 @@ cart();//calling cart function
         <div class="col-md-2 bg-dark p-0">
             <ul class="navbar-nav me-auto text-center">
                 <!--brands-->
-                <li class="nav-item bg-info">
+                <li class="nav-item bg-dark">
                     <a href="#" class="nav-link text-light"><h4>DELIVERY BRANDS</h4></a>
                 </li>
 
@@ -185,14 +186,12 @@ cart();//calling cart function
             </ul>
             <!--category-->
             <ul class="navbar-nav mg-auto text-center">
-                <li class="nav-item bg-info">
+                <li class="nav-item bg-dark">
                     <a href="#" class="nav-link text-light"><h4>CATEGORY</h4></a>
                 </li>
                 <?php
                 
                 getcategory();
-                
-               
                 /*
                 $select_query = "select * from `categories`";
                 $result = mysqli_query($con,$select_query);

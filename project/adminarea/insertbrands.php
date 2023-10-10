@@ -20,7 +20,8 @@
         }    
     }
 ?>
-        <h2 class="text-center">INSERT BRANDS</h2>
+<fieldset>
+<h2 class="text-center">INSERT BRANDS</h2>
 <form action="" method="post" class="mb-2">
     <div class="input-group w-90 mb-3">
         <span class="input-group-text bg-info"  id="basic-addon1"><i class="fa fa-receipt">
@@ -35,3 +36,4 @@
         >
     </div>
 </form>
+</fieldset>

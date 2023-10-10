@@ -20,7 +20,7 @@
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid p-0">
+    <div class="container-fluid1 p-0 mt-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <img src="../img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
@@ -30,7 +30,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../displayAll.php">products</a>
@@ -57,7 +57,7 @@
       <form class="d-flex" action="./searchproduct.php" method="get">
         <input class="form-control me-2" name="search_data" type="search" placeholder="Search" aria-label="Search">
         <!--<button class="btn btn-outline-dark" type="submit">Search</button>-->
-        <input type="submit" value="search" name="searchdata" class="btn btn-outline">
+        <input type="submit" value="search" name="searchdata" class="btn btn-outline text-light">
       </form>
     </div>
   </div>
@@ -66,7 +66,7 @@
 <?php
 cart();//calling cart function
 ?>
-    <nav class="navbar navbar-expand-lg bg-body-secondary">
+    <nav class="welcom navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto">
         <?php 
         //displays username if logged in
@@ -98,18 +98,16 @@ cart();//calling cart function
         </ul>
 
     </nav>
-    <div class="bg-light">
-        <h3 class="text-center">Hidden store</h3>
-        <p class="text-center">commucincation</p>
+    <div class="second">
+        <h3 class="text-center">Refubished Store</h3>
+        <p class="text-center">Communication is Key</p>
     </div>
     <!--product items-->
-    <div class="row">
+    <div class="row profilerow">
         <!--products-->
-        <div class="col-md-2">
-          <ul class="navbar-nav bg-dark text-center" style="height: 100vh;">
-
-           
-            <li class="nav-item bg-info">
+        <div class=" col-md-2">
+          <ul class="navbar-nav profilepage text-center" style="height: 100vh;">
+            <li class="nav-item">
                 <a class="nav-link text-light"  href="profile.php"><h4>Your profile</h4></a>
             </li>
             <?php
@@ -120,15 +118,12 @@ cart();//calling cart function
                 $fetch_image=mysqli_fetch_array($result_image);
                 $user_image=$fetch_image['user_image'];
                 echo "
-                <li class='nav-item  bg-light '>
-                <img src='./userimg/$user_image' class='profileimage my-4' alt='userimage'/>
+                <li class='backprofile nav-item' >
+                <img src='./userimg/$user_image' class='profileimage' alt='userimage'/>
                 </li>
                 ";
-
-
             ?>
-           
-            <li class="nav-item o">
+            <li class="nav-item">
                 <a class="nav-link text-light"  href="profile.php">pending orders</a>
             </li>
             <li class="nav-item ">
@@ -143,7 +138,6 @@ cart();//calling cart function
             <li class="nav-item ">
                 <a class="nav-link text-light"  href="logout.php">Logout</a>
             </li>
-
           </ul>
         </div>
         <div class="col-md-10">

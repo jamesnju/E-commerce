@@ -166,8 +166,8 @@ function getbrands(){
         $brand_title = $row_data['brand_title'];
         $brand_id = $row_data['brand_id'];
 
-        echo "<li class='nav-item bg-dark'>
-        <a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a>
+        echo "<li  class=' sidebar nav-item'>
+        <a href='index.php?brand=$brand_id' class='nav-link'>$brand_title</a>
     </li>";
     }
 }
@@ -180,7 +180,7 @@ function getbrands(){
         $category_title = $row['category_title'];
         $category_id = $row['category_id'];
 
-        echo "<li class='nav-item bg-dark'>
+        echo "<li class='cate nav-item'>
         <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
     </li>";
     }
@@ -375,6 +375,7 @@ function getbrands(){
             }
         }
         echo $total_price;
+        
     }
 
 
@@ -384,31 +385,31 @@ function getbrands(){
         global $con;
         $username=$_SESSION['username'];
         $get_details="select * from `regislation` where username='$username'";
-        $result_details=mysqli_query($con,$get_details);
+        $result_details=mysqli_query($con, $get_details);
         while($row_query=mysqli_fetch_array($result_details)){
            $user_id=$row_query['user_id'];
            if(!isset($_GET['edit_account'])){
             if(!isset($_GET['my_orders'])){
                 if(!isset($_GET['delete_account'])){
-                    $get_order="select * from `user_orders` where user_id=$user_id AND order_status='pending'";
+                    $get_order="select * from `user_orders` where user_id=$user_id and
+                    order_status='pending'";
                     $result_order=mysqli_query($con,$get_order);
                     $row_count=mysqli_num_rows($result_order);
-                    if($row_count>0){
+                    
+
+                    if($row_count > 0){
                         echo "<h3 class='text-success text-center my-5'>You have<span class='text-danger'> $row_count </span>pending orders</h3>
-                        <h5 class='text-center'><a href='profile.php?my_orders'class='text-danger text-decoration-none ' > view Orders details</a></h5>
-                        ";
-                        
-                    }else{
+                        <h5 class='text-center'><a href='profile.php?my_orders'class='text-danger text-decoration-none ' > view Orders details</a></h5>"; 
+                    } else{
                         echo "<h3 class='text-success text-center my-5 p-4'>You have<span class='text-danger'> 0 </span>pending orders</h3>
                         <h5 class='text-center'><a href='../index.php'class='text-success' >Explore products</a></h5>
-
                         ";
 
-                    }
+                    }  
                 }
             }
 
-           }
+        }
 
         }
 

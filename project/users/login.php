@@ -58,35 +58,37 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="../styles.css"> 
 </head>
 <body>
-    <div class="container-fluid my-3">
-        <h2 class="text-center">LOGIN FORM</h2>
-        <div class="row d-flex align-items-center justify-content-center mt-5">
-            <div class="col-lg-12 col-xl-6">
-                <form action="" method="post" enctype="multipart/form-data">
-                    <!-- username -->
-                    <div class="form-outline mb-4">
-                        <label for="username " class="form-label">username</label>
-                        <input type="text " id="username" class="form-control" placeholder="username" autocomplete="off" required name="username">
-                    </div>
-                
-                   <!--  password -->
-                    <div class="form-outline mb-4">
-                        <label for="password" class="form-label">password</label>
-                        <input type="password" id="password" class="form-control" placeholder="password" autocomplete="off" required name="password">
-                    </div>
+    <div class="container-login">
+        <fieldset>
+            <h2 class="text-center">LOGIN FORM</h2>
+            <div class="row ">
+                <div class="co">
+                    <form class="form" action="" method="post" enctype="multipart/form-data">
+                        <!-- username -->
+                        <div >
+                            <label for="username " class="form-label"><p>username</p></label>
+                            <input type="text " id="username" class="form-control" placeholder="username" autocomplete="off" required name="username">
+                        </div>
                     
-                    <div class="mt-4 pt-2">
-                        <input type="submit" value="Login" class="bg-info py-3 px-3 border-0" name="user_login">
-                    </div>
-                    <p><a href="#"> forgot password ?</a></p>
-                    <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account ?
-                        <a href="registration.php" class="text-decoration-none"> Click here to Register</a></p>
-                </form>
+                    <!--  password -->
+                        <div>
+                            <label for="password" class="form-label"><p>password</p></label>
+                            <input type="password" id="password" class="form-control" placeholder="password" autocomplete="off" required name="password">
+                        </div>
+                        
+                        <div class="btnlog">
+                            <button type="submit" name="user_login">Login</button>
+                        </div>
+                        <p><a href="#"> Forgot password ?</a></p>
+                        <p class="s">Don't have an account ?
+                            <a href="registration.php" class="text-decoration-none"> Click here to Register</a></p>
+                    </form>
+                </div>
             </div>
-        </div>
+        </fieldset>
     </div>
 
     

@@ -24,6 +24,7 @@
 
 
 ?>
+<fieldset>
 <h2 class="text-center">INSERT CATEGORIES</h2>
 <form action="" method="post" class="mb-2">
     <div class="input-group w-90 mb-3">
@@ -35,7 +36,8 @@
     </div>
     <div class="input-group w-10 mb-2 m-auto">
         <input type="submit" class="bg-info border-0 p-2 my-3"
-         name="insertcategories" value="Insert categories"
+        name="insertcategories" value="Insert categories"
         >
     </div>
 </form>
+</fieldset>

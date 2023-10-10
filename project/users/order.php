@@ -5,7 +5,6 @@
 
     if(isset($_GET['user_id'])){
         $user_id=$_GET['user_id'];
-
     }
     //getting total items and total price of all  items
     $get_ip_address= getIPAddress();
@@ -46,8 +45,6 @@ if($result){
     echo "<script>alert('inserted to orders')</script>";
     echo "<script>window.open('profile.php','_self')</script>";
 }
-
-
 //order pending
 $sql_pending_orders="insert into `orders_pending` (user_id,invoice_number,product_id,quantity,order_status) VALUES
  ($user_id,$invoice_number,$product_id,$quantity,'$status') ";

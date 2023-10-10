@@ -72,12 +72,13 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="../styles.css"> 
 
 </head>
 <body>
-    <div class="container-fluid my-3">
-        <h2 class="text-center">REGISTRATION FORM</h2>
+    <div class="reg container-fluid  my-0 py-3" >
+        <fieldset>
+        <h2 class="text-center text-success">REGISTRATION FORM</h2>
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-lg-12 col-xl-6">
                 <form action="" method="post" enctype="multipart/form-data">
@@ -94,10 +95,10 @@
                     <!-- user image -->
                     
                     <div class="form-outline mb-4">
-                        <label for="userimage" class="form-label">userimage</label>
+                        <label for="userimage" class="form-label">user image</label>
                         <input type="file" id="userimage" class="form-control" required name="userimage">
                     </div>
-                   <!--  password -->
+                <!--  password -->
                     <div class="form-outline mb-4">
                         <label for="password" class="form-label">password</label>
                         <input type="password" id="password" class="form-control" placeholder="password" autocomplete="off" required name="password">
@@ -117,14 +118,15 @@
                         <label for="usercontact" class="form-label">usercontact</label>
                         <input type="text" id="usercontact" class="form-control" placeholder="usercontact" autocomplete="off" required name="usercontact">
                     </div>
-                    <div class="mt-4 pt-2">
-                        <input type="submit" value="Register" class="bg-info py-3 px-3 border-0" name="user_register">
+                    <div class=" mt-4 pt-2">
+                        <input type="submit" value="Register" class="submit py-3 px-3 text-dark" name="user_register">
                     </div>
                     <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account ?
                         <a href="login.php" class="text-decoration-none"> Log in here</a></p>
                 </form>
             </div>
         </div>
+        </fieldset>
     </div>
 
     

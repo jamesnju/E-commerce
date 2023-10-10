@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div class="bg-secondary p-3 text-center text-white">
+<div class="p-3 text-center text-white">
+    <div class="icons">
+        <p><i class="fa-solid fa-phone"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-solid fa-location-dot"></i></p>
+    </div>
         <p>&copy;All rights reserves &copy;james 
             <?php echo date('Y');
-               echo date('F j, Y H:i:s');
             ?>
         </p>
 </div>

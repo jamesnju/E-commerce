@@ -20,7 +20,7 @@
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid p-0">
+    <div class="container-fluid1 p-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
@@ -30,23 +30,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="displayAll.php">products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./users/registration.php">Register</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i>
           <sup>
             <?php
               getcartnumbers(); 
-           ?></sup></a>
+          ?></sup></a>
         </li>
-       
-      
       </ul>
     </div>
   </div>
@@ -55,7 +50,7 @@
 <?php
 cart();//calling cart function
 ?>
-    <nav class="navbar navbar-expand-lg bg-body-secondary">
+    <nav class=" welcom navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto">
         <?php 
         
@@ -84,14 +79,14 @@ cart();//calling cart function
         </ul>
 
     </nav>
-    <div class="bg-light">
-        <h3 class="text-center">Hidden store</h3>
-        <p class="text-center">commucincation</p>
+    <div class="second">
+        <h3 class="text-center">Cart Items</h3>
+        <p class="text-center">We Value You</p>
     </div>
    <div class="container">
-    <div class="row">
-      <form action="" method="post" >
-        <table class="table table-bordered text-center">
+    <div class="row cartrow">
+      <form action="" method="post">
+        <table class=" bg-dark table table-bordered text-center">
             
           
             <tbody>
