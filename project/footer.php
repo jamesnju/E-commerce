@@ -13,16 +13,34 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+   
 <div class="p-3 text-center text-white">
     <div class="icons">
-        <p><i class="fa-solid fa-phone"></i></p>
-        <p><i class="fa-brands fa-instagram"></i></p>
-        <p><i class="fa-solid fa-location-dot"></i></p>
+        <div class="location">
+            <h3>Location</h3>
+            <p><i class="fa-solid fa-location-dot"></i></p>
+
+            <p>Kabuku</p>
+        </div>
+        <div class="cont">
+            <h3>Contact us</h3>
+            <p><i class="fa-solid fa-phone"></i></p>
+            <p><a class="call-owner" href="tel:+254700747076">  +254700747076</a></p>
+            <p><a class="contact-owner" href="mailto:james500nju@gmail.com?subject=Regarding%20My%20Nafuu Projects"> @send a mail</a></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+        </div>
+    <div class="user">
+        <h3>usefullinks</h3>
+        <p><a href="displayAll.php">Home</a></p>
+        <p><a href="faq.php">FAQ</a></p>
+        <p><a href="About us.php">About</a></p>
     </div>
-        <p>&copy;All rights reserves &copy;james 
+    </div>
+        <p>&copy;All rights reserves &copy;Nafuu commerce
             <?php echo date('Y');
             ?>
         </p>
+
 </div>
 
 <!--bootstrap js-->

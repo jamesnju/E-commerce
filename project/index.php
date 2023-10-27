@@ -27,16 +27,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
-      <ul class="nav77 navbar-nav me-auto mb-2 mb-lg-0 ">
+      <img src="./img/logo.png" alt="LOGO" class="logo"></a>
+      <ul class="length navbar-nav me-auto mb-2 mb-lg-0 ">
+        <!-- <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="index.php">product</a>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="index.php">Home</a>
+          <a class="nav-link" href="displayAll.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="displayAll.php">products</a>
+          <a class="nav-link" href="./jude/About us.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="insertproduct.php">Sale</a>
+          <a class="nav-link" href="sell.php">Sell</a>
         </li>
         <?php
           if(isset($_SESSION['username'])){
@@ -45,7 +48,7 @@
           </li>";
           }else{
             echo "<li class='nav-item'>
-            <a class='nav-link' href='./users/registration.php'>Create Account</a>
+            <a class='nav-link' href='./users/registration.php'></a>
           </li>";
           }
         ?>
@@ -57,7 +60,7 @@
           ?></sup></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Total price
+          <a class="nav-link" href="#">Price
             <?php 
               gettotalprice();
             ?>/=
@@ -105,13 +108,11 @@ cart();//calling cart function
           }
         ?>
         
-
         </ul>
-
-    </nav>
+    </nav>-
     <div class="second">
-        <h3 class="text-center ">SecondHand E-commerce</h3>
-        <p class="text-center">Sell Your Products Online</p>
+        <h3 class="text-center ">Nafuu Commerce</h3>
+        <p class="text-center">Buyers Best Option</p>
     </div>
     <!--product items-->
     <div class="row outsiderow">
@@ -163,7 +164,7 @@ cart();//calling cart function
             <ul class="navbar-nav me-auto text-center">
                 <!--brands-->
                 <li class="nav-item bg-dark">
-                    <a href="#" class="nav-link text-light"><h4>DELIVERY BRANDS</h4></a>
+                    <a href="#" class="nav-link text-dark bg-light"><h4>BRANDS</h4></a>
                 </li>
 
                 <?php
@@ -187,7 +188,7 @@ cart();//calling cart function
             <!--category-->
             <ul class="navbar-nav mg-auto text-center">
                 <li class="nav-item bg-dark">
-                    <a href="#" class="nav-link text-light"><h4>CATEGORY</h4></a>
+                    <a href="#" class="nav-link text-dark bg-light"><h4>CATEGORY</h4></a>
                 </li>
                 <?php
                 

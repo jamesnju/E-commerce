@@ -8,14 +8,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment </title>
      <!--fonrawosome-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="../styles.css"> 
 
 </head>
 <body>
@@ -28,13 +28,15 @@
         $user_id=$run_query['user_id'];
     ?>
     <div class="container">
-        <h2 class="text-center text-primary">Payment Options</h2>
+        <h2 class="text-center text-light">Payment Options</h2>
         <div class="row d-flex justify-content-center align-items-center my-5">
             <div class="col-md-6">
-            <a href="https://www.paypal.com" target="_blank"><img src="" alt="paypal"/></a>
+                <a href="https://www.paypal.com" target="_blank"><img src="../apiimg/online.jpg" width="80%" height="60%" alt="paypal"/></a>
             </div>
             <div class="col-md-6">
-            <a href="order.php?user_id=<?php echo $user_id ?>" ><h2>paymentoffline</h2></a>
+            <a href="order.php?user_id=<?php echo $user_id ?>" >
+                <img src="../apiimg/succs.jpg" width="80%" height="80%" alt="">
+            </a>
             </div>
         </div>
     </div>

@@ -3,9 +3,9 @@
     //include('./connection.php');
     //getting products
     function getproducts(){
-     global $con; 
+    global $con; 
      //condition to check will item is selected
-     if(!isset($_GET['category'])){
+    if(!isset($_GET['category'])){
         if(!isset($_GET['brand'])){
 
      $select_query="select * from `products` order by rand() limit 0,3";/* limit showsmax number of product to view per page you can by order product title or random*/
@@ -26,11 +26,11 @@
         <div class='card'>
             <img src='../adminarea/productimages/$product_image2' class='card-img-top' alt='$product_title'>
             <div class='card-body'>
-                <h5 class='card-title'>Price: Kshs$product_price /=</h5>
+                <h5 class='card-title'>Price: Ksh $product_price</h5>
                 <h5 class='card-title'>$product_title </h5>
                 <p class='card-text'>$product_description</p>
-                <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>
-                <a href='productdetails.php?product_id=$product_id' class='btn btn-info'>View more</a>
+                <a href='index.php?Addtocart=$product_id' class='btn btn-secondary'>Add to cart</a>
+                <a href='productdetails.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
             </div>
         </div> </div>";
     }
@@ -41,7 +41,7 @@
     function getAllproducts(){
         global $con; 
      //condition to check will item is selected
-     if(!isset($_GET['category'])){
+    if(!isset($_GET['category'])){
         if(!isset($_GET['brand'])){
 
      $select_query="select * from `products` order by rand() ";/* limit showsmax number of product to view per page you can by order product title or random*/
@@ -65,8 +65,8 @@
                 <h5 class='card-title'>Price: Kshs $product_price /=</h5>
                 <h5 class='card-title'>$product_title </h5>
                 <p class='card-text'>$product_description</p>
-                <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>
-                <a href='productdetails.php?product_id=$product_id' class='btn btn-info'>View more</a>
+                <a href='index.php?Addtocart=$product_id' class='btn btn-secondary'>Add to cart</a>
+                <a href='productdetails.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                 </div>
         </div> </div>";
     }
@@ -77,81 +77,81 @@
 
 
   //getting unique categories
-  function getuniquecategories(){
-    global $con; 
-    //condition to check will item is selected
-    if(isset($_GET['category'])){
-        $category_id = $_GET['category'];
-    $select_query="select * from `products` where category_id=$category_id ";
-   $result = mysqli_query($con,$select_query);
-   $num_row = mysqli_num_rows($result);
-   if($num_row==0){
-    echo "<h1 class='text-center text-danger'>No stock for this category</h1>";
-   }
-   while($row=mysqli_fetch_assoc($result)){
-        $product_id = $row['product_id'];
-       $product_title = $row['product_title'];
-       $product_description = $row['product_description'];
-       $product_keywords = $row['product_keywords'];
-       $category_id = $row['category_id'];
-       $brand_id = $row['brand_id'];
-       $product_image1 = $row['product_image1'];
-       $product_image2 = $row['product_image2'];
-       $product_image3 = $row['product_image3'];
-       $product_price = $row['product_price'];
-       
-       echo "<div class='col-md-4 mb-3'>
-       <div class='card'>
-           <img src='../adminarea/productimages/$product_image1' class='card-img-top' alt='$product_title'>
-           <div class='card-body'>
-               <h5 class='card-title'>Price:Kshs$product_price /=</h5>
-               <h5 class='card-title'>$product_title </h5>
-               <p class='card-text'>$product_description</p>
-               <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>
-               <a href='productdetails.php?product_id=$product_id' class='btn btn-info'>View more</a>
-           </div>
-       </div></div>";
-   }
+function getuniquecategories(){
+global $con; 
+//condition to check will item is selected
+if(isset($_GET['category'])){
+    $category_id = $_GET['category'];
+$select_query="select * from `products` where category_id=$category_id ";
+$result = mysqli_query($con,$select_query);
+$num_row = mysqli_num_rows($result);
+if($num_row==0){
+echo "<h1 class='text-center text-danger'>No stock for this category</h1>";
+}
+while($row=mysqli_fetch_assoc($result)){
+    $product_id = $row['product_id'];
+    $product_title = $row['product_title'];
+    $product_description = $row['product_description'];
+    $product_keywords = $row['product_keywords'];
+    $category_id = $row['category_id'];
+    $brand_id = $row['brand_id'];
+    $product_image1 = $row['product_image1'];
+    $product_image2 = $row['product_image2'];
+    $product_image3 = $row['product_image3'];
+    $product_price = $row['product_price'];
+    
+    echo "<div class='col-md-4 mb-3'>
+    <div class='card'>
+        <img src='../adminarea/productimages/$product_image1' class='card-img-top' alt='$product_title'>
+        <div class='card-body'>
+            <h5 class='card-title'>Price:Kshs$product_price /=</h5>
+            <h5 class='card-title'>$product_title </h5>
+            <p class='card-text'>$product_description</p>
+            <a href='index.php?Addtocart=$product_id' class='btn btn-secondary'>Add to cart</a>
+            <a href='productdetails.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
+        </div>
+    </div></div>";
+}
 }
 }
 
 
   //displaying individual item , unique brands 
-  function getuniquebrands(){
+function getuniquebrands(){
     global $con; 
     //condition to check will item is selected
     if(isset($_GET['brand'])){
         $brand_id = $_GET['brand'];
     $select_query="select * from `products` where brand_id=$brand_id ";
-   $result = mysqli_query($con,$select_query);
-   $num_row = mysqli_num_rows($result);
-   if($num_row==0){
-    echo "<h1 class='text-center text-danger'>No stock for this brand</h1>";
-   }
-   while($row=mysqli_fetch_assoc($result)){
+    $result = mysqli_query($con,$select_query);
+    $num_row = mysqli_num_rows($result);
+    if($num_row==0){
+        echo "<h1 class='text-center text-danger'>No stock for this brand</h1>";
+    }
+    while($row=mysqli_fetch_assoc($result)){
         $product_id = $row['product_id'];
-       $product_title = $row['product_title'];
-       $product_description = $row['product_description'];
-       $product_keywords = $row['product_keywords'];
-       $category_id = $row['category_id'];
-       $brand_id = $row['brand_id'];
-       $product_image1 = $row['product_image1'];
-       $product_image2 = $row['product_image2'];
-       $product_image3 = $row['product_image3'];
-       $product_price = $row['product_price'];
-       
-       echo "<div class='col-md-4 mb-3'>
-       <div class='card'>
-           <img src='../adminarea/productimages/$product_image1' class='card-img-top' alt='$product_title'>
-           <div class='card-body'>
-               <h5 class='card-title'>Price:Kshs$product_price /=</h5>
-               <h5 class='card-title'>$product_title </h5>
-               <p class='card-text'>$product_description</p>
-               <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>
-               <a href='productdetails.php?product_id=$product_id' class='btn btn-info'>View more</a>
-           </div>
-       </div></div>";
-   }
+    $product_title = $row['product_title'];
+    $product_description = $row['product_description'];
+    $product_keywords = $row['product_keywords'];
+    $category_id = $row['category_id'];
+    $brand_id = $row['brand_id'];
+    $product_image1 = $row['product_image1'];
+    $product_image2 = $row['product_image2'];
+    $product_image3 = $row['product_image3'];
+    $product_price = $row['product_price'];
+    
+    echo "<div class='col-md-4 mb-3'>
+    <div class='card'>
+        <img src='../adminarea/productimages/$product_image1' class='card-img-top' alt='$product_title'>
+        <div class='card-body'>
+            <h5 class='card-title'>Price:Kshs$product_price /=</h5>
+            <h5 class='card-title'>$product_title </h5>
+            <p class='card-text'>$product_description</p>
+            <a href='index.php?Addtocart=$product_id' class='btn btn-secondary'>Add to cart</a>
+            <a href='productdetails.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
+        </div>
+    </div></div>";
+}
 }
 }
 
@@ -167,7 +167,7 @@ function getbrands(){
         $brand_id = $row_data['brand_id'];
 
         echo "<li  class=' sidebar nav-item'>
-        <a href='index.php?brand=$brand_id' class='nav-link'>$brand_title</a>
+        <a href='index.php?brand=$brand_id' class='nav-link text-dark'>$brand_title</a>
     </li>";
     }
 }
@@ -181,7 +181,7 @@ function getbrands(){
         $category_id = $row['category_id'];
 
         echo "<li class='cate nav-item'>
-        <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
+        <a href='index.php?category=$category_id' class='nav-link text-dark'>$category_title</a>
     </li>";
     }
  }
@@ -218,8 +218,8 @@ function getbrands(){
                <h5 class='card-title'>Price:$product_price/= </h5>
                <h5 class='card-title'>$product_title </h5>
                <p class='card-text'>$product_description</p>
-               <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>
-               <a href='productdetails.php?product_id=$product_id' class='btn btn-info'>View more</a>
+               <a href='index.php?Addtocart=$product_id' class='btn btn-secondary'>Add to cart</a>
+               <a href='productdetails.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
            </div>
        </div></div>";
    }
@@ -259,8 +259,8 @@ function getbrands(){
                             <h5 class='card-title'>Price:Kshs$product_price/= </h5>
                             <h5 class='card-title'>$product_title </h5>
                             <p class='card-text'>$product_description</p>
-                            <a href='index.php?Addtocart=$product_id' class='btn btn-info'>Add to cart</a>
-                            <a href='index.php' class='btn btn-info'>Go Home</a>
+                            <a href='index.php?Addtocart=$product_id' class='btn btn-secondary'>Add to cart</a>
+                            <a href='index.php' class='btn btn-secondary'>Go Home</a>
                         </div>
                     </div>
                 </div>
@@ -323,7 +323,7 @@ function getbrands(){
             $result_query=mysqli_query($con,$select_query);
             $number=mysqli_num_rows($result_query);
             if($number>0){
-                echo"<script>alert('product already added to cart')</script>";
+                echo"<script>'product already added to cart'</script>";
                     //redirecting homepage
                 echo "<script>window.open('index.php','_self')</script>";
             }else{
@@ -387,8 +387,8 @@ function getbrands(){
         $get_details="select * from `regislation` where username='$username'";
         $result_details=mysqli_query($con, $get_details);
         while($row_query=mysqli_fetch_array($result_details)){
-           $user_id=$row_query['user_id'];
-           if(!isset($_GET['edit_account'])){
+        $user_id=$row_query['user_id'];
+        if(!isset($_GET['edit_account'])){
             if(!isset($_GET['my_orders'])){
                 if(!isset($_GET['delete_account'])){
                     $get_order="select * from `user_orders` where user_id=$user_id and

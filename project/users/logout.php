@@ -3,7 +3,7 @@
     session_unset();
     session_destroy();
     echo "<script>alert('loggedout successfully')</script>";
-    echo '<script>window.open("../index.php","_self")</script>';
+    echo '<script>window.open("../displayAll.php","_self")</script>';
 
 ?>
 

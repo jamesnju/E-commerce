@@ -20,24 +20,24 @@
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid p-0">
+    <div class="container-fluid1 p-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+    <img src="./img/logo.png" alt="LOGO" class="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <ul class="length navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="displayAll.php">products</a>
+          <a class="nav-link" href="displayAll.php">Home</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="./users/registration.php">Register</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i>
           <sup>
@@ -57,13 +57,13 @@
       <form class="d-flex" action="searchproduct.php" method="get">
         <input class="form-control me-2" name="search_data" type="search" placeholder="Search" aria-label="Search">
         <!--<button class="btn btn-outline-dark" type="submit">Search</button>-->
-        <input type="submit" value="search" name="searchdata" class="btn btn-outline">
+        <input type="submit" value="search" name="searchdata" class="btn btn-outline text-light">
       </form>
     </div>
   </div>
 </nav>
 <!--sidebar-->
-    <nav class="navbar navbar-expand-lg bg-body-secondary">
+    <nav class="welcom navbar navbar-expand-lg bg-body-secondary">
         <ul class="navbar-nav me-auto">
         <?php 
         
@@ -93,8 +93,8 @@
         </ul>
 
     </nav>
-    <div class="bg-light">
-      <h3 class="text-center text-success">SecondHand E-commerce</h3>
+    <div class="second">
+      <h3 class="text-center text-success">Nafuu Commerce</h3>
       <p class="text-center">Sell Your Products Online</p>
     </div>
     <!--product items-->
@@ -144,8 +144,8 @@
         <div class="col-md-2 bg-dark p-0">
             <ul class="navbar-nav me-auto text-center">
                 <!--brands-->
-                <li class="nav-item bg-info">
-                    <a href="#" class="nav-link text-light"><h4>DELIVERY BRANDS</h4></a>
+                <li class="nav-item bg-light">
+                    <a href="#" class="nav-link text-dark"><h4>BRANDS</h4></a>
                 </li>
 
                 <?php
@@ -168,8 +168,8 @@
             </ul>
             <!--category-->
             <ul class="navbar-nav mg-auto text-center">
-                <li class="nav-item bg-info">
-                    <a href="#" class="nav-link text-light"><h4>CATEGORY</h4></a>
+                <li class="nav-item bg-light">
+                    <a href="#" class="nav-link text-dark"><h4>CATEGORY</h4></a>
                 </li>
                 <?php
                 getcategory();

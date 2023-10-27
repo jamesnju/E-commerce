@@ -23,17 +23,17 @@
     <div class="container-fluid1 p-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+    <img src="./img/logo.png" alt="LOGO" class="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <ul class="length navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.php">Home</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="displayAll.php">products</a>
+          <a class="nav-link" href="displayAll.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i>
@@ -60,18 +60,18 @@ cart();//calling cart function
         </li>';
         }else{
           echo '<li class="nav-item">
-          <a class="nav-link" href="#">Welcome '.$_SESSION['username'].'</a>
+          <a class="nav-link text-center" href="#">Welcome '.$_SESSION['username'].'</a>
         </li>';
         }
       ?>
         <?php 
           if(!isset($_SESSION['username'])){
             echo '<li class="nav-item">
-            <a class="nav-link" href="./users/login.php">Login</a>
+            <a class="nav-link text-center" href="./users/login.php">Login</a>
           </li>';
           }else{
             echo '<li class="nav-item">
-            <a class="nav-link" href="./users/logout.php">Logout</a>
+            <a class="nav-link text-center" href="./users/logout.php">Logout</a>
           </li>';
           }
         ?>
@@ -83,7 +83,7 @@ cart();//calling cart function
         <h3 class="text-center">Cart Items</h3>
         <p class="text-center">We Value You</p>
     </div>
-   <div class="container">
+  <div class="container1">
     <div class="row cartrow">
       <form action="" method="post">
         <table class=" bg-dark table table-bordered text-center">
@@ -149,9 +149,9 @@ cart();//calling cart function
                   <td><input  type="checkbox" name="removeitem[]" value="<?php echo $product_id ?>"></td>
                   <td>
                       <!-- <button  class="bg-info px-3 py-2 border-0 mx-3">Update</button> -->
-                      <input type="submit" value="update" class="bg-info px-3 py-2 border-0 mx-3" name="update_cart">
+                      <input type="submit" value="update" class="bg-secondary px-3 py-2 border-0 mx-3" name="update_cart">
                       <!-- <button  class="bg-info px-3 py-2 border-0 mx-3">Remove</button> -->
-                      <input type="submit" value="remove" name="remove"  class="bg-info px-3 py-2 border-0 mx-3">
+                      <input type="submit" value="remove" name="remove"  class="bg-secondary px-3 py-2 border-0 mx-3">
                   </td>
                 </tr>
             <?php 
@@ -172,12 +172,12 @@ cart();//calling cart function
             $result = mysqli_query($con,$select_ipquery);
             $result_count = mysqli_num_rows($result);
             if($result_count>0){
-              echo "<h4 class='px-3'>Subtotal:<strong class='text-info'>$total_price /-</strong></h4>
-              <input type='submit' value='Continue shopping' name='continue_shopping'  class='bg-info px-3 py-2 border-0 mx-3'>
+              echo "<h4 class='px-3 text-dark'>Subtotal:<strong class='text-primary'>$total_price /-</strong></h4>
+              <input type='submit' value='Continue shopping' name='continue_shopping'  class='bg-secondary px-3 py-2 border-0 mx-3'>
               <button class='bg-secondary px-3 py-2 border-0 mx-3'><a href='./users/checkout.php' class='text-light text-decoration-none'>checkout</a></button>
           ";
             }else{
-              echo "<input type='submit' value='Continue shopping' name='continue_shopping'  class='bg-info px-3 py-2 border-0 mx-3'>
+              echo "<input type='submit' value='Continue shopping' name='continue_shopping'  class='bg-secondary px-3 py-2 border-0 mx-3'>
               ";
             }
 

@@ -22,7 +22,7 @@
     <div class="container-fluid1">
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <div class="container-fluid">
-                <img src="../img/user.png" alt="Amin" class="admin p-0">
+                <img src="../img/logo.png" alt="Amin" class="admin p-0">
 
                 <nav class="navbar navbar-expand-lg ">
                 <ul class="navbar-nav">

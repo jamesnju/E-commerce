@@ -51,13 +51,7 @@
                 echo "<script>alert('successfull')</script>";
             }
         }
-
-        
-
-        
-
     }
-
 ?>
 
 <!DOCTYPE html>

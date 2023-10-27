@@ -12,50 +12,50 @@
     <title>ecommerce</title>
     <!--fonrawosome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid p-0">
+    <div class="container-fluid1 p-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+    <img src="./img/logo.png" alt="LOGO" class="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="length navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link" href="displayAll.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="displayAll.php">products</a>
-        </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="./users/registration.php">Register</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Total price</a>
+          <a class="nav-link" href="#">Price</a>
         </li>
       
       </ul>
       <form class="d-flex" action="searchproduct.php" method="get">
         <input class="form-control me-2" name="search_data" type="search" placeholder="Search" aria-label="Search">
         <!--<button class="btn btn-outline-dark" type="submit">Search</button>-->
-        <input type="submit" value="search" name="searchdata" class="btn btn-outline">
+        <input type="submit" value="search" name="searchdata" class="btn btn-outline text-light">
       </form>
     </div>
   </div>
 </nav>
 <!--sidebar-->
-    <nav class="navbar navbar-expand-lg bg-body-secondary">
+    <nav class=" welcom navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto">
         <?php 
         //displays username ifuser is  logged in
@@ -69,7 +69,7 @@
         </li>';
         }
       ?>
-         <?php 
+        <?php 
         //checks if user is logged in or not
         if(!isset($_SESSION['username'])){
           echo '<li class="nav-item">
@@ -85,9 +85,9 @@
         </ul>
 
     </nav>
-    <div class="bg-light">
-        <h3 class="text-center">Hidden store</h3>
-        <p class="text-center">commucincation</p>
+    <div class="second">
+        <h3 class="text-center">Nafuu commerce</h3>
+        <p class="text-center">Commucincation</p>
     </div>
     <!--product items-->
     <div class="row">
@@ -97,7 +97,6 @@
                 <?php
                 searchproducts();
                 /*
-
                     $select_query="select * from `products` order by rand() limit 0.9";// limit showsmax number of product to view per page you can by order product title or random
                     $result = mysqli_query($con,$select_query);
                     while($row=mysqli_fetch_assoc($result)){
@@ -134,23 +133,19 @@
                 <li class="nav-item bg-info">
                     <a href="#" class="nav-link text-light"><h4>DELIVERY BRANDS</h4></a>
                 </li>
-
                 <?php
                     getbrands();
                     getuniquebrands();
                     /*
-                
                     $select_query = "select * from `brands` ";
                     $select_result = mysqli_query($con,$select_query);
                     while($row_data = mysqli_fetch_assoc($select_result)){
                         $brand_title = $row_data['brand_title'];
                         $brand_id = $row_data['brand_id'];
-
                         echo "<li class='nav-item bg-dark'>
                         <a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a>
                     </li>";
                     }*/
-                
                 ?>
             </ul>
             <!--category-->
@@ -160,37 +155,20 @@
                 </li>
                 <?php
                 getcategory();
-                getuniquecategories();
-                /*
-                $select_query = "select * from `categories`";
-                $result = mysqli_query($con,$select_query);
-                while($row = mysqli_fetch_assoc($result)){
-                    $category_title = $row['category_title'];
-                    $category_id = $row['category_id'];
-
-                    echo "<li class='nav-item bg-dark'>
-                    <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
-                </li>";
-                }*/
-                
-                
+                getuniquecategories();  
                 ?>
             </ul>
         </div>
     </div>
-
     <div class="footer">
         <?php 
             include('./footer.php');
         ?>
     </div>
     </div>
-
-
-
     <!--bootstrap js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
     
 </body>
 </html>

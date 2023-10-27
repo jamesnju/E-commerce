@@ -12,10 +12,10 @@
     <title>ecommerce</title>
     <!--fonrawosome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
@@ -26,32 +26,40 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="./img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+    <img src="./img/logo.png" alt="LOGO" class="logo"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="length navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php">procts</a>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link" href="displayAll.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="displayAll.php">products</a>
+          <a class="nav-link" href="About us.php">About</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="sell.php">Sell</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.php">FAQ</a>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link" href="./users/registration.php">Register</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="./cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>
             <?php
               getcartnumbers(); 
-           ?></sup></a>
+          ?></sup></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Total price:
+          <a class="nav-link" href="#">Price
           <?php 
               gettotalprice();
             ?>/=
           </a>
         </li>
-      
       </ul>
       <form class="d-flex" action="searchproduct.php" method="get">
         <input class="form-control me-2 " name="search_data" type="search" placeholder="Search" aria-label="Search">
@@ -79,11 +87,11 @@
         <?php 
           if(!isset($_SESSION['username'])){
             echo '<li class="nav-item">
-            <a class="nav-link" href="./login.php">Login</a>
+            <a class="nav-link" href="./users/login.php">Login</a>
           </li>';
           }else{
             echo '<li class="nav-item">
-            <a class="nav-link" href="./logout.php">Logout</a>
+            <a class="nav-link" href="./users/logout.php">Logout</a>
           </li>';
           }
         ?>
@@ -92,8 +100,8 @@
 
     </nav>
     <div class="second">
-        <h3 class="text-center text-success">Refubished Goods</h3>
-        <p class="text-center">Sell Your Products Online</p>
+        <h3 class="text-center text-success">Nafuu  Commerce</h3>
+        <p class="text-center">Buyers Best Option</p>
     </div>
     <!--product items-->
     <div class="row outsiderow">
@@ -138,7 +146,7 @@
             <ul class="sidebar navbar-nav m-auto text-center">
                 <!--brands-->
                 <li class="nav-item bg-dark">
-                    <a href="#" class="nav-link text-light"><h4>DELIVERY BRANDS</h4></a>
+                    <a href="#" class="nav-link text-dark bg-light"><h4>BRANDS</h4></a>
                 </li>
 
                 <?php 
@@ -163,7 +171,7 @@
             <!--category-->
             <ul class="navbar-nav mg-auto text-center">
                 <li class="nav-item bg-dark">
-                    <a href="#" class="nav-link text-light"><h4>CATEGORY</h4></a>
+                    <a href="#" class="nav-link text-dark bg-light"><h4>CATEGORY</h4></a>
                 </li>
                 <?php
                 getcategory();
@@ -174,7 +182,6 @@
                 while($row = mysqli_fetch_assoc($result)){
                     $category_title = $row['category_title'];
                     $category_id = $row['category_id'];
-
                     echo "<li class='nav-item bg-dark'>
                     <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
                 </li>";

@@ -79,8 +79,8 @@
     <div class="reg container-fluid  my-0 py-3" >
         <fieldset>
         <h2 class="text-center text-success">REGISTRATION FORM</h2>
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-lg-12 col-xl-6">
+        <div class=" cont row d-flex align-items-center justify-content-center h-20rem">
+            <div class="col-lg-12 col-xl-6 ">
                 <form action="" method="post" enctype="multipart/form-data">
                     <!-- username -->
                     <div class="form-outline mb-4">
@@ -95,8 +95,8 @@
                     <!-- user image -->
                     
                     <div class="form-outline mb-4">
-                        <label for="userimage" class="form-label">user image</label>
-                        <input type="file" id="userimage" class="form-control" required name="userimage">
+                        <label for="userimage" class="form-label">Profile image</label>
+                        <input type="file" id="userimage" class="form-control" name="userimage">
                     </div>
                 <!--  password -->
                     <div class="form-outline mb-4">

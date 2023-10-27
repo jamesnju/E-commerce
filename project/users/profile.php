@@ -23,17 +23,17 @@
     <div class="container-fluid1 p-0 mt-0">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <img src="../img/black-friday-elements-assortment.jpg" alt="LOGO" class="logo"></a>
+    <img src="../img/logo.png" alt="LOGO" class="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <ul class="length navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
           <a class="nav-link" aria-current="page" href="../index.php">Home</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="../displayAll.php">products</a>
+          <a class="nav-link" href="../displayAll.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="profile.php">My Account</a>
