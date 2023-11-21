@@ -114,39 +114,29 @@
         <p>Meet the talented individuals who make our company great...</p>
         </section>
         <div class="team">
-            <img src="./jude/team/WhatsApp Image 2023-10-11 at 11.25.10 PM.jpeg" alt="Our Team">
-            <p><strong> CLITON PETER</strong></p>
+            <img src="./jude/team/pexels-monstera-5876695.jpg" alt="Our Team">
+            <p><strong> SHINE DEE</strong></p>
             <p>PROJECT MANAGER</p>
         </div>
         <div class="team">
-            <img src="./jude/team/jude.jpeg" alt="Our Team">
-            <p><strong> JUDE  ORINA</strong></p>
+            <img src="./jude/team/pexels-ketut-subiyanto-4307869.jpg" alt="Our Team">
+            <p><strong> JOAKIM KHAN</strong></p>
             <p>DEVELOPER</p>
         </div> 
         <div class="team">
-            <img src="./jude/team/stell.jpeg" alt="Our Team">
-            <p><strong>STELLAR MBUTHIA</strong></p>
+            <img src="./jude/team/woman.jpg" alt="Our Team">
+            <p><strong>CHARITY NDOE</strong></p>
             <p>PROJECT DESIGNER</p>
         </div>     
         <div class="team">
-            <img src="./jude/team/james.jpg" alt="Our Team">
-            <p><strong>JAMES NJUGUNA</strong></p>
+            <img src="./jude/team/pexels-cottonbro-studio-5378700.jpg" alt="Our Team">
+            <p><strong>JAMES MICHICLE</strong></p>
             <p>DEVELOPER</p>
         </div> 
         <div class="team">
-            <img src="./jude/team/rich2.jpeg" alt="Our Team">
-            <p><strong>RICHARD OTIENO</strong></p>
-            <p>MORAL SUPPORT</p>
-        </div> 
-        <div class="team">
-            <img src="./jude//team/fich.jpeg" alt="Our Team">
-            <p><strong>CYTHIA MUEMBI</strong></p>
-            <p>DESIGNER DEVELOPER</p>
-        </div> 
-        <div class="team">
-            <img src="./jude/team.jpeg" alt="Our Team">
-            <p><strong>JUSH</strong></p>
-            <p>DEVELOPER</p>
+            <img src="./jude/team/woman1.jpg" alt="Our Team">
+            <p><strong>ALBETTER ABII</strong></p>
+            <p>SUPPORT</p>
         </div> 
     </section>
     <section class="section">

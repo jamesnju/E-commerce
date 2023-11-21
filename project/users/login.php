@@ -22,8 +22,8 @@
             $_SESSION['username']=$username;
             //matching the hashed pass in the db for verification
             if(password_verify($password,$row_data['user_password'])){
-                if($rows_count==1 AND $row_count_cart ==0){
-                    echo "<script>alert('login successful')</script>";
+                if($rows_count==1 AND $row_count_cart==0){
+                    echo "<script>alert(' login success')</script>";
                     echo "<script>window.open('profile.php','_self')</script>";
                 }else{
                     $_SESSION['username']=$username;//storesthe userdetails
@@ -58,7 +58,8 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles.css"> 
+    <link rel="stylesheet" href="../styles.css">
+ 
 </head>
 <body>
     <div class="container-login">
@@ -81,6 +82,7 @@
                         
                         <div class="btnlog">
                             <button type="submit" name="user_login">Login</button>
+                            
                         </div>
                         <p><a href="#"> Forgot password ?</a></p>
                         <p class="s">Don't have an account ?
@@ -90,18 +92,6 @@
             </div>
         </fieldset>
     </div>
-
-    
-
-
-
-
-
-
-
-
-
-
 
 <!--bootstrap js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

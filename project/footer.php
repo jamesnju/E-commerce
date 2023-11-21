@@ -17,29 +17,32 @@
 <div class="p-3 text-center text-white">
     <div class="icons">
         <div class="location">
-            <h3>Location</h3>
-            <p><i class="fa-solid fa-location-dot"></i></p>
-
-            <p>Kabuku</p>
+            <h3 >Location</h3>
+            <p class="text-decoration-underline">Our Branches</p>
+            <p><i class="fa-solid fa-location-dot"></i> Kabuku branch</p>
+            <p><i class="fa-solid fa-location-dot"></i> Kiambu branch</p>
+            <p><i class="fa-solid fa-location-dot"></i> Ngecha branch</p>
+            <p><i class="fa-solid fa-location-dot"></i>HeadQuater Nairobi office Moi Avenue</p>
         </div>
         <div class="cont">
             <h3>Contact us</h3>
-            <p><i class="fa-solid fa-phone"></i></p>
-            <p><a class="call-owner" href="tel:+254700747076">  +254700747076</a></p>
+            <p><i class="fa-solid fa-whatsapp"></i></p>
+            <p><a class="call-owner" href="tel:+254700747076"><i class="fa-solid fa-phone"></i>  +254700747076</a></p>
             <p><a class="contact-owner" href="mailto:james500nju@gmail.com?subject=Regarding%20My%20Nafuu Projects"> @send a mail</a></p>
-            <p><i class="fa-brands fa-instagram"></i></p>
+            <p><i class="fa-brands fa-instagram"></i>Instagram</p>
+
         </div>
-    <div class="user">
-        <h3>usefullinks</h3>
+        <div class="user">
+        <h3>Links</h3>
         <p><a href="displayAll.php">Home</a></p>
         <p><a href="faq.php">FAQ</a></p>
-        <p><a href="About us.php">About</a></p>
+        <p><a href="About us.php">About us</a></p>
+        </div>
     </div>
-    </div>
-        <p>&copy;All rights reserves &copy;Nafuu commerce
-            <?php echo date('Y');
-            ?>
+    <p>&copy;All rights reserves &copy;Nafuu commerce<?php echo date('Y');
+            ?>  
         </p>
+        <p>made with &#128525; by @James contact@james500nju@gmail.com</p>
 
 </div>
 

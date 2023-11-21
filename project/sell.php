@@ -1,6 +1,6 @@
 <?php 
     include('./connection.php');
-    include('./functions/functioncommon.php');
+    // include('./functions/functioncommon.php');
     session_start();
 
 ?>
@@ -87,12 +87,11 @@
         </ul>
 
     </nav>
-    <h1 class="text-center text-success">Fill the form to Sell</h1>
     <?php
             if(!isset($_SESSION['username'])){
-              include('./users/login.php');
+              include('./selllogin.php');
             }else{
-              include('upload.php');
+              include('./upload.php');
             }
             ?>
             <a href=""></a>

@@ -52,8 +52,8 @@
         <div class="row">
             <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
                 <div class=" p-5">
-                    <a href="" ><img src="../img/black-friday-elements-assortment.jpg" class="adminname" alt=""></a>
-                    <p class="text-light text-center">Admin Name</p>
+                    <a href="" ><img src="../img/logo.png" class="adminname" alt=""></a>
+                    <p class="text-light text-center">Admin <?php echo $_SESSION['username'] ?></p>
                 </div>
                 <div class="button text-center">
                     <button class="my-3"><a href="insertproduct.php" class="nav-link text-light bg-dark my-1">Insert product</a></button>

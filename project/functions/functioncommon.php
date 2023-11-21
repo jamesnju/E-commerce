@@ -301,23 +301,14 @@ function getbrands(){
         return $ip; 
         //$ip = getIPAddress();  
         //echo 'User Real IP Address - '.$ip;  
-
     }
-
-
-
-
-
     //cart function
-    
     function cart(){
         if(isset($_GET['Addtocart'])){
             global $con;
             $ip = getIPAddress();
-            $get_product_id=$_GET['Addtocart'];
-            
+            $get_product_id=$_GET['Addtocart'];     
             //$quantity=$_GET['quantity'];
-
             $select_query="select * from `cart` where ip_address='$ip' 
             and product_id=$get_product_id";
             $result_query=mysqli_query($con,$select_query);
@@ -332,9 +323,7 @@ function getbrands(){
                 echo"<script>alert('product added to cart')</script>"; 
                 echo "<script>window.open('index.php','_self')</script>";
             }
-
         }
-
     }
     //getting number of items from the db
 
@@ -355,9 +344,7 @@ function getbrands(){
         }
         echo $count_items; 
     }
-
     //getting price to  display at the  navbar
-
     function gettotalprice(){
         global $con;
         $ip = getIPAddress();
@@ -374,13 +361,9 @@ function getbrands(){
                 $total_price+=$product_values;
             }
         }
-        echo $total_price;
-        
+        echo $total_price;   
     }
-
-
     //get user order details in the profile
-
     function getUserOrder(){
         global $con;
         $username=$_SESSION['username'];
@@ -395,8 +378,6 @@ function getbrands(){
                     order_status='pending'";
                     $result_order=mysqli_query($con,$get_order);
                     $row_count=mysqli_num_rows($result_order);
-                    
-
                     if($row_count > 0){
                         echo "<h3 class='text-success text-center my-5'>You have<span class='text-danger'> $row_count </span>pending orders</h3>
                         <h5 class='text-center'><a href='profile.php?my_orders'class='text-danger text-decoration-none ' > view Orders details</a></h5>"; 
@@ -404,14 +385,10 @@ function getbrands(){
                         echo "<h3 class='text-success text-center my-5 p-4'>You have<span class='text-danger'> 0 </span>pending orders</h3>
                         <h5 class='text-center'><a href='../index.php'class='text-success' >Explore products</a></h5>
                         ";
-
                     }  
                 }
             }
-
         }
-
         }
-
-    }
+}
 ?>

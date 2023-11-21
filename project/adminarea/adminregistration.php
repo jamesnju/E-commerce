@@ -53,36 +53,36 @@
 </head>
 <body>
     <div class="container-fluid m-3">
-        <h3 class="text-center mt-5">Admin  registration</h3>
+        <h3 class="text-center mt-5 text-light">Admin  registration</h3>
         <div class="row d-flex justify-content-center align-item-center">
             <div class="col-lg-6 col-xl-5">
-                <img src="" alt="Adminimage">
+                <img src="./adminimg//reg.jpg" width="98%" height="99%" alt="Adminimage">
             </div>
             <div class="col-lg-6 col-xl-5">
                 <!-- <img src="" alt="Adminimage"> -->
                 <form action="" method="post">
-                    <div class="form-outline mb-4">
-                        <label for="username">username</label>
+                    <div class="form-outline mb-4 text-light">
+                        <label for="username ">username</label>
                         <input type="text" id="username"  name="username" placeholder="Enter username"  class="form-control">
 
                     </div>
-                    <div class="form-outline mb-4">
-                        <label for="email">email</label>
+                    <div class="form-outline mb-4 text-light">
+                        <label for="email ">email</label>
                         <input type="email" id="email"  name="email" placeholder="Enter email"  class="form-control">
                         
                     </div>
-                    <div class="form-outline mb-4">
-                        <label for="password">password</label>
+                    <div class="form-outline mb-4 text-light">
+                        <label for="password ">password</label>
                         <input type="password" id="password"  name="password" placeholder="Enter password"  class="form-control">
                         
                     </div>
-                    <div class="form-outline mb-4">
-                        <label for="confirmpassword">confirmpassword</label>
+                    <div class="form-outline mb-4 text-light">
+                        <label for="confirmpassword ">confirmpassword</label>
                         <input type="password" id="confirm_password"  name="confirm_password" placeholder="Enter confirmpassword"  class="form-control">
                     </div>
                     <div>
                         <input type="submit" class="bg-info py-2 px-3 border" value="Register" name="adminreg">
-                        <p class="small pt-1 text-bold text-success fw-bold">Have an account click here <a class="link-danger" href="adminlogin.php">Login</a></p>
+                        <p class="small pt-1 text-bold text-success fw-bold">Have an account click here <a class="link-danger text-light" href="adminlogin.php">Login</a></p>
                     </div>
                 </form>
             </div>

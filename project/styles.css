@@ -135,43 +135,46 @@ section>p{
 .team{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 1px;
 }
 .team>img{
-    margin: 40px;
-    height: 20rem;
-    width: 20rem;
-    object-fit: contain;
+    margin-top: 24px;
+    height: 15rem;
+    padding-top: -1rem;
+    width: 15rem;
+    object-fit: cover;
     align-items: center;
+    border-radius: 180%;
 }
 .team>p{
     text-align: center;
 }
-/* sell */
-/* .age{
-    display: flex;
-    justify-content: left;
-    background-color: rebeccapurple;
-    flex-direction: row;
-    
-    
+/*sell */
+.age{
+    color: ghostwhite;
 }
-.age>p{
-    height: 1px;
-    width: 1px;
+.age > label >p{
+    padding-top: 1px;
+    font-size: 18px;
+}
+.age >label{
     display: flex;
-    flex-direction: row;
-    text-align: center;
-} */
+    width: 100%;
+    justify-content: space-around;
+}
+.age label> input{
+    height: 2rem;
+    padding-top: 0rem;
+    width: 1rem;
+}
 
 
 
 /*foooter*/
 
 .footer{
-    
     position: relative;
-    bottom: 0;
+    bottom: 0%;
     width: 100%;
     background-color: rgb(2, 2, 32);
 }
@@ -187,9 +190,17 @@ section>p{
     text-decoration: none;
     
 }
-.user>a{
+.user p>a{
     text-decoration: none;
+    color: ghostwhite;
 
+}
+.cont p>a{
+    text-decoration: none;
+    color: ghostwhite;
+}
+.icons>a:hover{
+    color: brown;
 }
 
 /*cart*/
@@ -245,7 +256,7 @@ section>p{
 }
 /* payment Page */
 .container{
-    background-color: red;
+    background-color: gainsboro;
     color: aqua;
     width: 40rem;
 }
@@ -308,6 +319,43 @@ fieldset{
     justify-self: center;
     align-items: center;
 }
+/* popup */
+.popup{
+    background-color: #fff;
+    color: black;
+    height: 20rem;
+    width: 29rem;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 1.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%)  scale(1);
+    /* background-color: #fff;
+    color: black;
+    height: 20rem;
+    width: 29rem;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transition: transform 1.4s, top 0.4s; */
+}
+/* .popup>button{
+    height: 1px;
+    font-size: 2px;
+    padding: 0;
+    width: 10%;
+} */
 .form button{
     border: 2px solid black;
     width: 20%;
@@ -351,11 +399,25 @@ fieldset{
     padding: 20px;
 }
 .containeradmin{
-    background-color: rgb(165, 6, 6);
+    background-color: gainsboro;
     padding: 20px;
 }
 
 
+.hidden {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 9999;
+  }
+  
 
 
 @media screen and(mix-width: 560px) {

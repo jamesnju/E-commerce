@@ -50,28 +50,28 @@
     <link rel="stylesheet" href="../styles.css">
 
 </head>
-<body>
+<body >
     <div class="container-fluid m-3">
-        <h3 class="text-center mt-5">Admin  Login</h3>
+        <h3 class="text-center mt-5 text-light">Admin  Login</h3>
         <div class="row d-flex justify-content-center align-item-center">
             <div class="col-lg-6 col-xl-5">
-                <img src="" alt="Adminimage">
+                <img src="./adminimg/login.jpg" alt="Adminimage">
             </div>
             <div class="col-lg-6 col-xl-5">
                 <!-- <img src="" alt="Adminimage"> -->
                 <form action="" method="post">
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="username">username</label>
                         <input type="text" id="username"  name="username" placeholder="Enter username"  class="form-control">
                     </div>
 
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="password">password</label>
                         <input type="password" id="password"  name="password" placeholder="Enter password" class="form-control">
                     </div>
-                    <p><a href="forgotpassword.php" class="text-danger fw-bold">forgot password?</a></p>
+                    <p><a href="forgotpassword.php" class="text-danger fw-bold text-light">forgot password?</a></p>
                     <div>
-                        <input type="submit" class="bg-info py-2 px-3 border" value="Login" name="adminlog">
+                        <input type="submit" class="bg-info py-2 px-3 border text-light" value="Login" name="adminlog">
                         <p class="small pt-1 text-bold text-success fw-bold">Don't Have an account click here <a class="link-danger" href="adminregistration.php">Register</a></p>
                     </div>
                 </form>
