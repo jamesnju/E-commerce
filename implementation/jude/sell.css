@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 1rem;
+    background-color: gray;
+}
+fieldset{
+    margin-top: 20rem;
+    margin: auto;
+    width: 30rem;
+    height: 30rem;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+h1{
+    text-align: center;
+    color: green;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+input{
+    height: 40px;
+    width: 20rem;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 3px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+button{
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    width: 60px;
+    background-color: gold;
+
+}
+.main{
+    text-align: center;
+    color: aliceblue;
+}

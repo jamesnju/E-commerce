@@ -1,0 +1,13 @@
+.footer{
+    
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(2, 2, 32);
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px;
+    cursor: pointer;}
